@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("kakao")
@@ -41,7 +41,6 @@ public class KakaoController {
         if (member == null) {
             return ResponseEntity.badRequest().body(new MsgEntity("No logged-in user found", null));
         }
-
 
         // DB에서 실제 사용자 엔티티 조회
         Member sessionMember = memberRepository.findById(member.getMember_id())

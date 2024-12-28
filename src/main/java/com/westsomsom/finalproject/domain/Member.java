@@ -22,6 +22,6 @@ public class Member {
     private String email;
 
     private Integer gender; // 0: 남자, 1: 여자
-    private String ageGroup; // 연령대 (예: "20대", "30대")
+    private String ageGroup; // 연령대
     private String residence; // 거주지
 }
