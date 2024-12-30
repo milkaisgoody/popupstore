@@ -32,13 +32,13 @@ public class KakaoService {
     @Autowired
     private final MemberRepository memberRepository;
 
-    @Value("${kakao.client.id}")
+    @Value("${kakao.client.id}") //    @Value("${kakao.client.id}")
     private String KAKAO_CLIENT_ID;
 
-    @Value("${kakao.client.secret}")
+    @Value("${kakao.client.secret}") //    @Value("${kakao.client.secret}")
     private String KAKAO_CLIENT_SECRET;
 
-    @Value("${kakao.redirect.url}")
+    @Value("${kakao.redirect.url}") //    @Value("${kakao.redirect.url}")
     private String KAKAO_REDIRECT_URL;
 
     private final static String KAKAO_AUTH_URI = "https://kauth.kakao.com"; //카카오 계정 인증을 위한 URI
